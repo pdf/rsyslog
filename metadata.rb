@@ -90,8 +90,30 @@ attribute 'rsyslog/priv_seperation',
 
 attribute 'rsyslog/default_file_template',
   :display_name => 'Default file log format template',
-  :description => 'The name of a pre-defined log format template (ie - `RSYSLOG_FileFormat`), used for local log files.',
+  :description => 'The name of a pre-defined log format template (ie - `RSYSLOG_FileFormat`), used for local log files.'
 
 attribute 'rsyslog/default_remote_template',
   :display_name => 'Default remote log format template',
-  :description => 'The name of a pre-defined log format template (ie - `RSYSLOG_SyslogProtocol23Format`), used for remote log forwarding.',
+  :description => 'The name of a pre-defined log format template (ie - `RSYSLOG_SyslogProtocol23Format`), used for remote log forwarding.'
+
+attribute 'rsyslog/enable_tls',
+  :display_name => 'Enable TLS',
+  :description => 'Whether or not to enable TLS encryption. When enabled, forces protocol to "tcp"',
+  :default => 'false'
+
+attribute 'rsyslog/tls_ca_file',
+  :display_name => 'TLS CA file',
+  :description => 'Path to TLS CA file. Required for both server and clients.'
+
+attribute 'rsyslog/tls_certificate_file',
+  :display_name => 'TLS certificate file',
+  :description => 'Path to TLS certificate file. Required for server, optional for clients.'
+
+attribute 'rsyslog/tls_key_file',
+  :display_name => 'TLS key file',
+  :description => 'Path to TLS key file. Required for server, optional for clients.'
+
+attribute 'rsyslog/tls_auth_mode',
+  :display_name => 'TLS auth mode',
+  :description => 'Value for "$InputTCPServerStreamDriverAuthMode"/"$ActionSendStreamDriverAuthMode", determines whether client certs are validated.',
+  :default => 'anon'

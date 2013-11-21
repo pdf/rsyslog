@@ -36,6 +36,11 @@ default['rsyslog']['enable_imklog']             = true
 default['rsyslog']['config_prefix']             = '/etc'
 default['rsyslog']['default_file_template']    = nil
 default['rsyslog']['default_remote_template']   = nil
+default['rsyslog']['enable_tls']                = false
+default['rsyslog']['tls_ca_file']               = nil
+default['rsyslog']['tls_certificate_file']      = nil
+default['rsyslog']['tls_key_file']              = nil
+default['rsyslog']['tls_auth_mode']             = 'anon'
 
 # The most likely platform-specific attributes
 default['rsyslog']['service_name']              = 'rsyslog'
