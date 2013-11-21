@@ -117,3 +117,8 @@ attribute 'rsyslog/tls_auth_mode',
   :display_name => 'TLS auth mode',
   :description => 'Value for "$InputTCPServerStreamDriverAuthMode"/"$ActionSendStreamDriverAuthMode", determines whether client certs are validated.',
   :default => 'anon'
+
+attribute 'rsyslog/use_local_ipv4',
+  :display_name => 'Try to use local IPv4 address',
+  :description => 'Whether or not to make use the remote local IPv4 address on cloud systems when searching for servers (where available).',
+  :default => 'false'
